@@ -1,32 +1,16 @@
+class Point(val x: Double, val y: Double)
+
+fun area(a: Point,b: Point,c: Point): Double {
+    return kotlin.math.abs(
+        a.x*(b.y-c.y)+b.x*(c.y-a.y)+c.x*(a.y-b.y)
+    ) / 2
+}
+
+class Pointik(val x: Double, val y: Double)
 
 class Poi(val x: Double, val y: Double)
 
-fun distik(a: Poi,b: Poi): Double =
-    kotlin.math.sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y))
 
-class Pointi(val x: Double, val y: Double)
-{
-    fun dist(o: Pointi): Double =
-        kotlin.math.sqrt((x-o.x)*(x-o.x)+(y-o.y)*(y-o.y))
-}
-
-class Point(val x: Double, val y: Double)
-
-class Triangle(val a: Point, val b: Point, val c: Point)
-{
-    fun contains(p: Point): Boolean
-    {
-        fun area(p1: Point,p2: Point,p3: Point): Double =
-            kotlin.math.abs(
-                (p1.x*(p2.y-p3.y)+p2.x*(p3.y-p1.y)+p3.x*(p1.y-p2.y))/2
-            )
-        val A = area(a,b,c)
-        val A1 = area(p,b,c)
-        val A2 = area(a,p,c)
-        val A3 = area(a,b,p)
-        return kotlin.math.abs(A - (A1+A2+A3)) < 0.0001
-    }
-}
 
 fun main(args: Array<String>) {
 
@@ -54,16 +38,21 @@ fun teat1()
 {
     //Задание 1
 
-    println("Введите координаты треугольника:")
     val a = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val b = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val c = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
-    println("Введите координаты точки:")
     val p = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
 
-    val t = Triangle(a,b,c)
-    if (t.contains(p)) println("Точка внутри")
-    else println("Точка вне")
+    val s = area(a,b,c)
+    val s1 = area(p,b,c)
+    val s2 = area(a,p,c)
+    val s3 = area(a,b,p)
+
+    if (kotlin.math.abs(s - (s1+s2+s3)) < 0.01)
+        println("Внутри")
+    else
+        println("Снаружи")
+
 
 }
 
@@ -71,36 +60,41 @@ fun teat2()
 {
     //Задание 2
 
-    println("Введите координаты первой точки:")
-    val a = Pointi(readLine()!!.toDouble(), readLine()!!.toDouble())
-    println("Введите координаты второй точки:")
-    val b = Pointi(readLine()!!.toDouble(), readLine()!!.toDouble())
-    println("Расстояние: ${a.dist(b)}")
+    val a = Pointik(readLine()!!.toDouble(), readLine()!!.toDouble())
+    val b = Pointik(readLine()!!.toDouble(), readLine()!!.toDouble())
+
+    val dx = a.x - b.x
+    val dy = a.y - b.y
+    val d = kotlin.math.sqrt(dx*dx + dy*dy)
+
+    println(d)
+
 }
 
 fun teat3()
 {
     //Задание 3
 
-    println("Введите количество точек (>2):")
     val n = readLine()!!.toInt()
-    val arr = Array(n){Point(0.0,0.0)}
-    for (i in 0 until n){
-        println("Точка ${i+1}:")
-        arr[i] = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
-    }
+    val p = Array(n){Poi(0.0,0.0)}
 
-    var min = Double.MAX_VALUE
+    for (i in 0 until n)
+        p[i] = Poi(readLine()!!.toDouble(), readLine()!!.toDouble())
+
+    var min = 1e18
     var max = 0.0
 
-    for (i in 0 until n){
-        for (j in i+1 until n){
-            val d = distik(arr[i],arr[j])
+    for (i in 0 until n)
+        for (j in i+1 until n) {
+            val dx = p[i].x - p[j].x
+            val dy = p[i].y - p[j].y
+            val d = kotlin.math.sqrt(dx*dx + dy*dy)
             if (d < min) min = d
             if (d > max) max = d
         }
-    }
-    println("Мин расстояние: $min")
-    println("Макс расстояние: $max")
+
+    println("Минимум: $min")
+    println("Максимум: $max")
+
 }
 
