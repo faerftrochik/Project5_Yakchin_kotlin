@@ -27,8 +27,8 @@ fun teat1() {
 
     val a = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val b = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
-    val c = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
-    val p = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
+    val c = Point(readln().toDouble(), readLine()!!.toDouble())
+    val p = Point(readln().toDouble(), readLine()!!.toDouble())
 
     val triangle = Triangle(a, b, c)
 
@@ -45,7 +45,9 @@ fun teat2() {
 
     println("Вы вошли в задачу 2 ")
 
+    println("Введите координаты x и y первой точки: ")
     val a = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
+    println("Введите координаты x и y второй точки: ")
     val b = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
 
     val dx = a.x - b.x

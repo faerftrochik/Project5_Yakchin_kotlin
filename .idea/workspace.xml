@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88dabbfb-5732-4f91-9a25-a17c002479ba" name="Changes" comment="3 finali 3">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Point.kt" afterDir="false" />
+    <list default="true" id="88dabbfb-5732-4f91-9a25-a17c002479ba" name="Changes" comment="5 finali!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Point.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Point.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1765626178536</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5 finali!!!">
+      <created>1765634166628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765634166628</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +110,7 @@
     <MESSAGE value="2 Big Update" />
     <MESSAGE value="3 finali" />
     <MESSAGE value="3 finali 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 finali 3" />
+    <MESSAGE value="5 finali!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 finali!!!" />
   </component>
 </project>

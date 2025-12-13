@@ -17,9 +17,3 @@ class Triangle(val a: Point, val b: Point, val c: Point)
         return kotlin.math.abs(s-sum)<0.01
     }
 }
-
-// fun area(a: Point, b: Point, c: Point): Double {
-   // return kotlin.math.abs(
-     //   a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)
-   // ) / 2  // формула площади треуголника по координатам
-//}
