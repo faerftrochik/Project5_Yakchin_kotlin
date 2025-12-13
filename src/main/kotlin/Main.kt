@@ -1,12 +1,3 @@
-class Point(val x: Double, val y: Double)
-
-fun area(a: Point, b: Point, c: Point): Double {
-    return kotlin.math.abs(
-        a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)
-    ) / 2  // формула площади треуголника по координатам
-}
-
-
 
 fun main(args: Array<String>) {
 
@@ -39,12 +30,9 @@ fun teat1() {
     val c = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val p = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
 
-    val s = area(a, b, c)
-    val s1 = area(p, b, c)
-    val s2 = area(a, p, c)
-    val s3 = area(a, b, p)
+    val triangle = Triangle(a, b, c)
 
-    if (kotlin.math.abs(s - (s1 + s2 + s3)) < 0.01)
+    if (triangle.contains(p))
         println("Внутри")
     else
         println("Снаружи")
