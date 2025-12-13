@@ -38,6 +38,8 @@ fun teat1()
 {
     //Задание 1
 
+    println("Вы вошли в задачу 1 ")
+
     val a = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val b = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
     val c = Point(readLine()!!.toDouble(), readLine()!!.toDouble())
@@ -60,6 +62,8 @@ fun teat2()
 {
     //Задание 2
 
+    println("Вы вошли в задачу 2 ")
+
     val a = Pointik(readLine()!!.toDouble(), readLine()!!.toDouble())
     val b = Pointik(readLine()!!.toDouble(), readLine()!!.toDouble())
 
@@ -74,6 +78,8 @@ fun teat2()
 fun teat3()
 {
     //Задание 3
+
+    println("Вы вошли в задачу 3 ")
 
     val n = readLine()!!.toInt()
     val p = Array(n){Poi(0.0,0.0)}
